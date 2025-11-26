@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result Certificate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center">Result Certificate</h2>
+        <p><b>Student Name:</b> <span th:text="${result.studentName}"></span></p>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Insem</th>
+                <th>Endsem</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Subject 1</td>
+                <td th:text="${result.sub1Insem}"></td>
+                <td th:text="${result.sub1Endsem}"></td>
+                <td th:text="${result.sub1Insem + result.sub1Endsem}"></td>
+            </tr>
+            <tr>
+                <td>Subject 2</td>
+                <td th:text="${result.sub2Insem}"></td>
+                <td th:text="${result.sub2Endsem}"></td>
+                <td th:text="${result.sub2Insem + result.sub2Endsem}"></td>
+            </tr>
+            <tr>
+                <td>Subject 3</td>
+                <td th:text="${result.sub3Insem}"></td>
+                <td th:text="${result.sub3Endsem}"></td>
+                <td th:text="${result.sub3Insem + result.sub3Endsem}"></td>
+            </tr>
+            <tr>
+                <td>Subject 4</td>
+                <td th:text="${result.sub4Insem}"></td>
+                <td th:text="${result.sub4Endsem}"></td>
+                <td th:text="${result.sub4Insem + result.sub4Endsem}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p><b>Total Marks:</b> <span th:text="${result.totalMarks}"></span></p>
+        <p><b>Percentage:</b> <span th:text="${result.percentage}"></span>%</p>
+        <p><b>CGPA:</b> <span th:text="${result.cgpa}"></span></p>
+
+        <div class="mt-4">
+            <a th:href="@{/}" class="btn btn-primary">Enter New Result</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

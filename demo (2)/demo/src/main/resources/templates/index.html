@@ -1,0 +1,86 @@
+index.html
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>CGPA Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header">
+      <h3>Enter Marks (each subject = Insem (30) + Endsem (70))</h3>
+    </div>
+    <div class="card-body">
+      <form th:action="@{/calculate}" th:object="${studentResult}" method="post">
+        <div class="mb-3">
+          <label class="form-label">Student Name</label>
+          <input type="text" th:field="*{studentName}" class="form-control" placeholder="Enter student name" required>
+        </div>
+        <!-- Subject 1 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Subject 1 - Insem (0-30)</label>
+            <input type="number" th:field="*{sub1Insem}" class="form-control" min="0" max="30" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Subject 1 - Endsem (0-70)</label>
+            <input type="number" th:field="*{sub1Endsem}" class="form-control" min="0" max="70" required>
+          </div>
+        </div>
+        <!-- Subject 2 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Subject 2 - Insem (0-30)</label>
+            <input type="number" th:field="*{sub2Insem}" class="form-control" min="0" max="30" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Subject 2 - Endsem (0-70)</label>
+            <input type="number" th:field="*{sub2Endsem}" class="form-control" min="0" max="70" required>
+          </div>
+        </div>
+        <!-- Subject 3 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Subject 3 - Insem (0-30)</label>
+            <input type="number" th:field="*{sub3Insem}" class="form-control" min="0" max="30" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Subject 3 - Endsem (0-70)</label>
+            <input type="number" th:field="*{sub3Endsem}" class="form-control" min="0" max="70" required>
+          </div>
+        </div>
+        <!-- Subject 4 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Subject 4 - Insem (0-30)</label>
+            <input type="number" th:field="*{sub4Insem}" class="form-control" min="0" max="30" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Subject 4 - Endsem (0-70)</label>
+            <input type="number" th:field="*{sub4Endsem}" class="form-control" min="0" max="70" required>
+          </div>
+        </div>
+        <!-- Subject 5 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Subject 5 - Insem (0-30)</label>
+            <input type="number" th:field="*{sub5Insem}" class="form-control" min="0" max="30" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Subject 5 - Endsem (0-70)</label>
+            <input type="number" th:field="*{sub5Endsem}" class="form-control" min="0" max="70" required>
+          </div>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary">Store & Generate Certificate</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

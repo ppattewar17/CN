@@ -1,0 +1,94 @@
+<!-- src/main/resources/templates/certificate.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Certificate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    .certificate {
+      border: 6px double #333;
+      padding: 30px;
+      background: #fff;
+      margin: 30px auto;
+      width: 800px;
+    }
+    @media print {
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container">
+  <div class="certificate">
+    <div class="text-center mb-4">
+      <h2>Institute Name</h2>
+      <p>Certificate of Performance</p>
+    </div>
+    <div>
+      <p><strong>Student Name:</strong> <span th:text="${result.studentName}">Student Name</span></p>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Insem (30)</th>
+            <th>Endsem (70)</th>
+            <th>Total (100)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Subject 1</td>
+            <td th:text="${result.sub1Insem}">0</td>
+            <td th:text="${result.sub1Endsem}">0</td>
+            <td th:text="${result.sub1Insem + result.sub1Endsem}">0</td>
+          </tr>
+          <tr>
+            <td>Subject 2</td>
+            <td th:text="${result.sub2Insem}">0</td>
+            <td th:text="${result.sub2Endsem}">0</td>
+            <td th:text="${result.sub2Insem + result.sub2Endsem}">0</td>
+          </tr>
+          <tr>
+            <td>Subject 3</td>
+            <td th:text="${result.sub3Insem}">0</td>
+            <td th:text="${result.sub3Endsem}">0</td>
+            <td th:text="${result.sub3Insem + result.sub3Endsem}">0</td>
+          </tr>
+          <tr>
+            <td>Subject 4</td>
+            <td th:text="${result.sub4Insem}">0</td>
+            <td th:text="${result.sub4Endsem}">0</td>
+            <td th:text="${result.sub4Insem + result.sub4Endsem}">0</td>
+          </tr>
+          <tr>
+            <td>Subject 5</td>
+            <td th:text="${result.sub5Insem}">0</td>
+            <td th:text="${result.sub5Endsem}">0</td>
+            <td th:text="${result.sub5Insem + result.sub5Endsem}">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Total Marks (out of 500):</strong> <span th:text="${result.totalMarks}">0</span></p>
+      <p><strong>Percentage:</strong> <span th:text="${result.percentage}">0</span> %</p>
+      <p><strong>CGPA:</strong> <span th:text="${result.cgpa}">0</span></p>
+    </div>
+    <div class="mt-4 d-flex justify-content-between">
+      <div>
+        <p>__________________________</p>
+        <p>Exam Coordinator</p>
+      </div>
+      <div>
+        <p>__________________________</p>
+        <p>Principal</p>
+      </div>
+    </div>
+    <div class="text-center mt-3 no-print">
+      <button class="btn btn-success" onclick="window.print()">Print Certificate</button>
+      <a class="btn btn-primary" th:href="@{/}">Enter New Result</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
