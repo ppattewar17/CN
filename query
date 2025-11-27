@@ -45,3 +45,199 @@ CREATE TABLE student_marks (
 select * from student_marks;
 
 
+USE bookstore;
+
+SELECT * FROM books;
+
+USE studentdb;
+DROP TABLE IF EXISTS student_marks1;
+SELECT * FROM student_marks1;
+CREATE TABLE student_marks1 (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    student_name VARCHAR(255),
+
+    sub1insem INT NOT NULL,
+    sub1endsem INT NOT NULL,
+
+    sub2insem INT NOT NULL,
+    sub2endsem INT NOT NULL,
+
+    sub3insem INT NOT NULL,
+    sub3endsem INT NOT NULL,
+
+    sub4insem INT NOT NULL,
+    sub4endsem INT NOT NULL,
+
+    sub5insem INT NOT NULL,
+    sub5endsem INT NOT NULL,
+
+    total_marks INT NOT NULL,
+    percentage DOUBLE NOT NULL,
+    cgpa DOUBLE NOT NULL,
+
+    PRIMARY KEY (id)
+);
+
+
+USE studentdb;
+CREATE TABLE student_marks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(100),
+    subject1_30 INT, subject1_70 INT, subject1_total INT,
+    subject2_30 INT, subject2_70 INT, subject2_total INT,
+    subject3_30 INT, subject3_70 INT, subject3_total INT,
+    subject4_30 INT, subject4_70 INT, subject4_total INT,
+    cgpa DECIMAL(5,2)
+);
+select * from student_marks;
+
+
+USE bookstore;
+
+SELECT * FROM books;
+
+USE studentdb;
+DROP TABLE IF EXISTS student_marks1;
+SELECT * FROM student_marks1;
+CREATE TABLE student_marks1 (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    student_name VARCHAR(255),
+
+    sub1insem INT NOT NULL,
+    sub1endsem INT NOT NULL,
+
+    sub2insem INT NOT NULL,
+    sub2endsem INT NOT NULL,
+
+    sub3insem INT NOT NULL,
+    sub3endsem INT NOT NULL,
+
+    sub4insem INT NOT NULL,
+    sub4endsem INT NOT NULL,
+
+    sub5insem INT NOT NULL,
+    sub5endsem INT NOT NULL,
+
+    total_marks INT NOT NULL,
+    percentage DOUBLE NOT NULL,
+    cgpa DOUBLE NOT NULL,
+
+    PRIMARY KEY (id)
+);
+
+
+USE studentdb;
+CREATE TABLE student_marks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(100),
+    subject1_30 INT, subject1_70 INT, subject1_total INT,
+    subject2_30 INT, subject2_70 INT, subject2_total INT,
+    subject3_30 INT, subject3_70 INT, subject3_total INT,
+    subject4_30 INT, subject4_70 INT, subject4_total INT,
+    cgpa DECIMAL(5,2)
+);
+select * from student_marks;
+
+
+USE bookstore;
+
+SELECT * FROM books;
+
+USE studentdb;
+DROP TABLE IF EXISTS student_marks1;
+SELECT * FROM student_marks1;
+CREATE TABLE student_marks1 (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    student_name VARCHAR(255),
+
+    sub1insem INT NOT NULL,
+    sub1endsem INT NOT NULL,
+
+    sub2insem INT NOT NULL,
+    sub2endsem INT NOT NULL,
+
+    sub3insem INT NOT NULL,
+    sub3endsem INT NOT NULL,
+
+    sub4insem INT NOT NULL,
+    sub4endsem INT NOT NULL,
+
+    sub5insem INT NOT NULL,
+    sub5endsem INT NOT NULL,
+
+    total_marks INT NOT NULL,
+    percentage DOUBLE NOT NULL,
+    cgpa DOUBLE NOT NULL,
+
+    PRIMARY KEY (id)
+);
+
+
+USE studentdb;
+CREATE TABLE student_marks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(100),
+    subject1_30 INT, subject1_70 INT, subject1_total INT,
+    subject2_30 INT, subject2_70 INT, subject2_total INT,
+    subject3_30 INT, subject3_70 INT, subject3_total INT,
+    subject4_30 INT, subject4_70 INT, subject4_total INT,
+    cgpa DECIMAL(5,2)
+);
+select * from student_marks;
+
+
+USE bookstore;
+
+SELECT * FROM books;
+
+USE studentdb;
+DROP TABLE IF EXISTS student_marks1;
+SELECT * FROM student_marks1;
+CREATE TABLE student_marks1 (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    student_name VARCHAR(255),
+
+    sub1insem INT NOT NULL,
+    sub1endsem INT NOT NULL,
+
+    sub2insem INT NOT NULL,
+    sub2endsem INT NOT NULL,
+
+    sub3insem INT NOT NULL,
+    sub3endsem INT NOT NULL,
+
+    sub4insem INT NOT NULL,
+    sub4endsem INT NOT NULL,
+
+    sub5insem INT NOT NULL,
+    sub5endsem INT NOT NULL,
+
+    total_marks INT NOT NULL,
+    percentage DOUBLE NOT NULL,
+    cgpa DOUBLE NOT NULL,
+
+    PRIMARY KEY (id)
+);
+
+
+USE studentdb;
+CREATE TABLE student_marks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_name VARCHAR(100),
+    subject1_30 INT, subject1_70 INT, subject1_total INT,
+    subject2_30 INT, subject2_70 INT, subject2_total INT,
+    subject3_30 INT, subject3_70 INT, subject3_total INT,
+    subject4_30 INT, subject4_70 INT, subject4_total INT,
+    cgpa DECIMAL(5,2)
+);
+select * from student_marks;
+
+
+CREATE DATABASE bookstore;
+USE bookstore;
+CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name
+VARCHAR(255), email VARCHAR(255) UNIQUE, password VARCHAR(255));
+CREATE TABLE books (id INT AUTO_INCREMENT PRIMARY KEY, title
+VARCHAR(255), author VARCHAR(255), price DECIMAL(10,2));
+INSERT INTO books (title, author, price) VALUES('The Alchemist', 'Paulo Coelho', 10.99),
+('1984', 'George Orwell', 8.99),('Rich Dad Poor Dad', 'Robert Kiyosaki', 12.50);
